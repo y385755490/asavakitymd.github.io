@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Hello World｜undefined
+        
         
     </title>
 
@@ -137,7 +137,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Hello World</h1>
+                    <h1></h1>
                     
                     <span class="meta">
                          作者 John Doe
@@ -154,7 +154,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Hello World
+            
         </span>
     </div>
 </header>
@@ -165,19 +165,53 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="用Hexo-Github-搭建属于自己的博客"><a href="#用Hexo-Github-搭建属于自己的博客" class="headerlink" title="用Hexo+Github 搭建属于自己的博客"></a>用Hexo+Github 搭建属于自己的博客</h1><p>大概可以分为以下几个步骤</p>
+<ol>
+<li>搭建环境准备（包括node.js和git环境，gitHub账户的配置）</li>
+<li>安装Hexo</li>
+<li>配置Hexo</li>
+<li>怎样将Hexo与github page 联系起来</li>
+<li>怎样发布文章</li>
+<li>主题 推荐</li>
+<li>主题Net的简单配置</li>
+<li>添加sitemap和feed插件</li>
+<li>添加404 公益页面</li>
+</ol>
+<h2 id="配置Node-js环境"><a href="#配置Node-js环境" class="headerlink" title="配置Node.js环境"></a>配置Node.js环境</h2><p>下载Node.js安装文件：<br><a href="https://nodejs.org/en/" title="下载地址" target="_blank" rel="noopener">下载地址</a>(说明：LTS为长期支持版，Current为当前最新版)</p>
+<p>保持默认设置即可，一路Next，安装很快就结束了。 然后我们检查一下是不是要求的组件都安装好了，同时按下Win和R，打开运行窗口：</p>
+<p>在新打开的窗口中输入cmd，敲击回车，打开命令行界面。（下文将直接用打开命令行来表示以上操作，记住哦~） 在打开的命令行界面中，输入</p>
+<p>node -v<br>npm -v</p>
+<h2 id="github账户的注册和配置"><a href="#github账户的注册和配置" class="headerlink" title="github账户的注册和配置"></a>github账户的注册和配置</h2><h3 id="创建代码库"><a href="#创建代码库" class="headerlink" title="创建代码库"></a>创建代码库</h3><p>登陆之后，点击页面右上角的加号，选择New repository：<br><img src="https://raw.githubusercontent.com/gdutxiaoxu/blog_pic/master/19_06/9fe4afa0gw1faljww56v8j20ci0a975c.jpg" alt="创建repository" title="创建repository"></p>
+<h3 id="新建代码库"><a href="#新建代码库" class="headerlink" title="新建代码库"></a>新建代码库</h3><p>进入代码库创建页面：</p>
+<p>在Repository name下填写yourname.github.io，Description (optional)下填写一些简单的描述（不写也没有关系），</p>
+<p>如图所示：<br><img src="https://raw.githubusercontent.com/gdutxiaoxu/blog_pic/master/19_06/9fe4afa0gw1faljv7hoqhj20p40fz0vo.jpg" alt="新建代码库" title="新建代码库"></p>
+<blockquote>
+<p>注意：比如我的github名称是gdutxiaoxu ,这里你就填 gdutxiaoxu.github.io,如果你的名字是xujun，那你就填 xujun.github.io</p>
+</blockquote>
+<p>到此搭建hexo博客的相关环境配置已经完成，下面开始讲解Hexo的相关配置</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>先创建一个文件夹（用来存放所有blog的东西），然后cd到该文件夹下。<br>安装hexo命令：npm i -g hexo<br>安装完成后，查看版本：</p>
+<p>npm-v</p>
+<p>初始化命令：hexo init ，初始化完成之后打开所在的文件夹可以看到以下文件：</p>
+<p>解释一下：<br>node_modules：是依赖包<br>public：存放的是生成的页面<br>scaffolds：命令生成文章等的模板<br>source：用命令创建的各种文章<br>themes：主题<br>_config.yml：整个博客的配置<br>db.json：source解析所得到的<br>package.json：项目所需模块项目的配置信息</p>
+<p>###配置Deployment<br>同样在_config.yml文件中，找到Deployment，然后按照如下修改：</p>
+<p>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourname.github.io.git<br>  branch: master</p>
+<p>比如我的仓库的地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:gdutxiaoxu/gdutxiaoxu.github.io.git，所以配置如下</p>
+<p>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:gdutxiaoxu/gdutxiaoxu.github.io.git<br>  branch: master</p>
+<p>回到gitbash中，进入你的blog目录，分别执行以下命令：<br>hexo clean<br>hexo generate<br>hexo server<br>注：hexo 3.0把服务器独立成个别模块，需要单独安装：npm i hexo-server。</p>
+<p>打开浏览器输入：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<p>接着你就可以遇见天使的微笑了~</p>
+<p>##写博客、发布文章<br>先安装一波：npm install hexo-deployer-git –save（这样才能将你写好的文章部署到github服务器上并让别人浏览到）</p>
+<p>新建一篇博客，执行下面的命令：</p>
+<p>hexo new post “article title”</p>
+<p>这时候在我的 电脑的目录下 F:\hexo\source\ _posts 将会看到 article title.md 文件</p>
+<p>用MarDown编辑器打开就可以编辑文章了。文章编辑好之后，运行生成、部署命令：</p>
+<ol>
+<li>hexo g   // 生成</li>
+<li>hexo d   // 部署</li>
+</ol>
+<p>当然你也可以执行下面的命令，相当于上面两条命令的效果</p>
+<p>hexo d -g //在部署前先生成</p>
+<p>部署成功后访问 你的地址，<a href="https://yourName.github.io（这里输入我的地址：" target="_blank" rel="noopener">https://yourName.github.io（这里输入我的地址：</a> <a href="https://y385755490.github.io" target="_blank" rel="noopener">https://y385755490.github.io</a> ),将可以看到生成的文章。</p>
 
                 <hr>
                 
@@ -201,7 +235,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用Hexo-Github-搭建属于自己的博客"><span class="toc-text">用Hexo+Github 搭建属于自己的博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Node-js环境"><span class="toc-text">配置Node.js环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github账户的注册和配置"><span class="toc-text">github账户的注册和配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建代码库"><span class="toc-text">创建代码库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建代码库"><span class="toc-text">新建代码库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-text">安装hexo</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
