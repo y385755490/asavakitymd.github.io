@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Archives: 2019/12 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2019/12/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -152,324 +152,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-CentOS-8上安装Docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/04/CentOS-8上安装Docker/">CentOS 8上安装Docker</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/04/CentOS-8上安装Docker/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/12/04/CentOS-8上安装Docker/" class="archive-article-date">
   	<time datetime="2019-12-04T08:39:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-04</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CentOS-8上安装Docker"><a href="#CentOS-8上安装Docker" class="headerlink" title="CentOS 8上安装Docker"></a>CentOS 8上安装Docker</h1><p>** 准备工作：CentOS 8的工作实例和具有sudo特权的用户**</p>
-<h2 id="一、如何添加必要的Docker存储库"><a href="#一、如何添加必要的Docker存储库" class="headerlink" title="一、如何添加必要的Docker存储库"></a>一、如何添加必要的Docker存储库</h2><p>我们将使用dnf config-manager实用程序添加Docker存储库。为此，请打开一个终端窗口并发出命令：</p>
-<p><strong>sudo dnf config-manager –add-repo=<a href="https://download.docker.com/linux/centos/docker-ce.repo" target="_blank" rel="noopener">https://download.docker.com/linux/centos/docker-ce.repo</a></strong></p>
-<h2 id="二、如何找到Docker-CE的可安装版本"><a href="#二、如何找到Docker-CE的可安装版本" class="headerlink" title="二、如何找到Docker CE的可安装版本"></a>二、如何找到Docker CE的可安装版本</h2><p>截至目前，Red Hat已阻止docker-ce的安装，因此，如果您尝试运行命令sudo dnf install docker-ce，将运行失败。相反，您必须安装特定版本的Docker。要找出可用的版本，请发出以下命令：</p>
-<p><strong>dnf list docker-ce –showduplicates | sort -r</strong></p>
-<p>从该列表中，我们可以看到版本docker-ce-3：18.09.1-3.el7可用于安装。 </p>
-<h2 id="三、如何安装Docker-CE"><a href="#三、如何安装Docker-CE" class="headerlink" title="三、如何安装Docker CE"></a>三、如何安装Docker CE</h2><p>要安装该版本，请发出命令：</p>
-<p><strong>sudo dnf install docker-ce-3:18.09.1-3.el7</strong></p>
-<p>为了强制DNS解析在Docker容器中起作用，必须禁用firewalld。为此，发出命令：</p>
-<p><strong>sudo systemctl disable firewalld</strong></p>
-<p>接下来，我们将使用以下命令启动并启用docker守护进程：</p>
-<p><strong>sudo systemctl enable –now docker</strong></p>
-<p>最后，使用以下命令将您的用户添加到docker组：</p>
-<p><strong>sudo usermod -aG docker $USER</strong></p>
-<p>恭喜，您现在可以运行Docker CE并准备在CentOS 8上运行，即刻开始部署那些容器化的应用程序吧。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/04/CentOS-8上安装Docker/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-centos8配置上网" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/15/centos8配置上网/">centos8配置上网</a>
+      <a class="archive-article-title" href="/2019/12/04/CentOS-8上安装Docker/">CentOS 8上安装Docker</a>
     </h1>
   
 
-        
-        <a href="/2019/11/15/centos8配置上网/" class="archive-article-date">
-  	<time datetime="2019-11-15T06:07:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#CentOS8配置上网<br> ##一、查看IP（类似于ifconfig、ip a）：# nmcli<br> <img src="/images/CentOS8ToInt/1.png" alt><br>##二、激活网卡<br><strong># nmcli c up ens33</strong><br><img src="/images/CentOS8ToInt/2.png" alt></p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/15/centos8配置上网/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-VM15InstallCentOS8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/14/VM15InstallCentOS8/">VM15.5安装CentOS8</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/14/VM15InstallCentOS8/" class="archive-article-date">
-  	<time datetime="2019-11-14T08:39:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#VM15.5安装centos8<br> ##一、     镜像下载</p>
-<p><strong>国内源下载镜像：（推荐）</strong></p>
-<p><a href="http://mirrors.aliyun.com/centos/8.0.1905/isos/x86_64/CentOS-8-x86_64-1905-dvd1.iso" target="_blank" rel="noopener">http://mirrors.aliyun.com/centos/8.0.1905/isos/x86_64/CentOS-8-x86_64-1905-dvd1.iso</a></p>
-<p><strong>国外源下载镜像：（不建议）</strong></p>
-<p><a href="http://mirror.qoxy.com/centos/8.0.1905/isos/x86_64/CentOS-8-x86_64-1905-dvd1.iso" target="_blank" rel="noopener">http://mirror.qoxy.com/centos/8.0.1905/isos/x86_64/CentOS-8-x86_64-1905-dvd1.iso</a></p>
-<p>##一、     安装过程<br><img src="/images/CentOS8/1.png" alt><br><img src="/images/CentOS8/2.png" alt><br><img src="/images/CentOS8/3.png" alt><br><img src="/images/CentOS8/4.png" alt><br><img src="/images/CentOS8/5.png" alt><br><strong>完成后选中刚创建的虚拟机点击编辑虚拟机位置</strong><br>配置如下图<br><img src="/images/CentOS8/6.png" alt><br><strong>开启此虚拟机，按提示配置</strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/14/VM15InstallCentOS8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/14/hello-world/">用Hexo+Github 搭建属于自己的博客</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/14/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-14T06:16:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="用Hexo-Github-搭建属于自己的博客"><a href="#用Hexo-Github-搭建属于自己的博客" class="headerlink" title="用Hexo+Github 搭建属于自己的博客"></a>用Hexo+Github 搭建属于自己的博客</h1><p>大概可以分为以下几个步骤</p>
-<ol>
-<li>搭建环境准备（包括node.js和git环境，gitHub账户的配置）</li>
-<li>安装Hexo</li>
-<li>配置Hexo</li>
-<li>怎样将Hexo与github page 联系起来</li>
-<li>怎样发布文章</li>
-<li>主题 推荐</li>
-<li>主题Net的简单配置</li>
-<li>添加sitemap和feed插件</li>
-<li>添加404 公益页面</li>
-</ol>
-<h2 id="配置Node-js环境"><a href="#配置Node-js环境" class="headerlink" title="配置Node.js环境"></a>配置Node.js环境</h2><p>下载Node.js安装文件：<br><a href="https://nodejs.org/en/" title="下载地址" target="_blank" rel="noopener">下载地址</a>(说明：LTS为长期支持版，Current为当前最新版)</p>
-<p>保持默认设置即可，一路Next，安装很快就结束了。 然后我们检查一下是不是要求的组件都安装好了，同时按下Win和R，打开运行窗口：</p>
-<p>在新打开的窗口中输入cmd，敲击回车，打开命令行界面。（下文将直接用打开命令行来表示以上操作，记住哦~） 在打开的命令行界面中，输入</p>
-<p>node -v<br>npm -v</p>
-<h2 id="github账户的注册和配置"><a href="#github账户的注册和配置" class="headerlink" title="github账户的注册和配置"></a>github账户的注册和配置</h2><h3 id="创建代码库"><a href="#创建代码库" class="headerlink" title="创建代码库"></a>创建代码库</h3><p>登陆之后，点击页面右上角的加号，选择New repository：<br><img src="https://raw.githubusercontent.com/gdutxiaoxu/blog_pic/master/19_06/9fe4afa0gw1faljww56v8j20ci0a975c.jpg" alt="创建repository" title="创建repository"></p>
-<h3 id="新建代码库"><a href="#新建代码库" class="headerlink" title="新建代码库"></a>新建代码库</h3><p>进入代码库创建页面：</p>
-<p>在Repository name下填写yourname.github.io，Description (optional)下填写一些简单的描述（不写也没有关系），</p>
-<p>如图所示：<br><img src="https://raw.githubusercontent.com/gdutxiaoxu/blog_pic/master/19_06/9fe4afa0gw1faljv7hoqhj20p40fz0vo.jpg" alt="新建代码库" title="新建代码库"></p>
-<blockquote>
-<p>注意：比如我的github名称是gdutxiaoxu ,这里你就填 gdutxiaoxu.github.io,如果你的名字是xujun，那你就填 xujun.github.io</p>
-</blockquote>
-<p>到此搭建hexo博客的相关环境配置已经完成，下面开始讲解Hexo的相关配置</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>先创建一个文件夹（用来存放所有blog的东西），然后cd到该文件夹下。<br>安装hexo命令：npm i -g hexo<br>安装完成后，查看版本：</p>
-<p>npm-v</p>
-<p>初始化命令：hexo init ，初始化完成之后打开所在的文件夹可以看到以下文件：</p>
-<p>解释一下：<br>node_modules：是依赖包<br>public：存放的是生成的页面<br>scaffolds：命令生成文章等的模板<br>source：用命令创建的各种文章<br>themes：主题<br>_config.yml：整个博客的配置<br>db.json：source解析所得到的<br>package.json：项目所需模块项目的配置信息</p>
-<p>###配置Deployment<br>同样在_config.yml文件中，找到Deployment，然后按照如下修改：</p>
-<p>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourname.github.io.git<br>  branch: master</p>
-<p>比如我的仓库的地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:gdutxiaoxu/gdutxiaoxu.github.io.git，所以配置如下</p>
-<p>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:gdutxiaoxu/gdutxiaoxu.github.io.git<br>  branch: master</p>
-<p>回到gitbash中，进入你的blog目录，分别执行以下命令：<br>hexo clean<br>hexo generate<br>hexo server<br>注：hexo 3.0把服务器独立成个别模块，需要单独安装：npm i hexo-server。</p>
-<p>打开浏览器输入：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<p>接着你就可以遇见天使的微笑了~</p>
-<p>##写博客、发布文章<br>先安装一波：npm install hexo-deployer-git –save（这样才能将你写好的文章部署到github服务器上并让别人浏览到）</p>
-<p>新建一篇博客，执行下面的命令：</p>
-<p>hexo new post “article title”</p>
-<p>这时候在我的 电脑的目录下 F:\hexo\source\ _posts 将会看到 article title.md 文件</p>
-<p>用MarDown编辑器打开就可以编辑文章了。文章编辑好之后，运行生成、部署命令：</p>
-<ol>
-<li>hexo g   // 生成</li>
-<li>hexo d   // 部署</li>
-</ol>
-<p>当然你也可以执行下面的命令，相当于上面两条命令的效果</p>
-<p>hexo d -g //在部署前先生成</p>
-<p>部署成功后访问 你的地址，<a href="https://yourName.github.io（这里输入我的地址：" target="_blank" rel="noopener">https://yourName.github.io（这里输入我的地址：</a> <a href="https://y385755490.github.io" target="_blank" rel="noopener">https://y385755490.github.io</a> ),将可以看到生成的文章。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/14/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -491,9 +214,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
