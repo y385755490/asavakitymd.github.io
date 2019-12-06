@@ -182,7 +182,8 @@
 <h2 id="4-创建结束，以后想进入mysql执行"><a href="#4-创建结束，以后想进入mysql执行" class="headerlink" title="4.创建结束，以后想进入mysql执行"></a>4.创建结束，以后想进入mysql执行</h2><p>dockerr exec -it docker_mysql bash</p>
 <hr>
 <h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>SQLyog连接不上mysql<br><strong>解决：</strong><br>关闭防火墙<br>systemctl start firewalld # 开启防火墙<br>systemctl stop firewalld  # 关闭防火墙<br>systemctl status firewalld  #检查防火墙状态</p>
-<h2 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h2><h3 id="mysql8创建远程连接账户"><a href="#mysql8创建远程连接账户" class="headerlink" title="mysql8创建远程连接账户"></a>mysql8创建远程连接账户</h3><ol>
+<h2 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h2><h3 id="mysql8查看所有用户"><a href="#mysql8查看所有用户" class="headerlink" title="mysql8查看所有用户"></a>mysql8查看所有用户</h3><p>select user,host from mysql.user</p>
+<h3 id="mysql8创建远程连接账户"><a href="#mysql8创建远程连接账户" class="headerlink" title="mysql8创建远程连接账户"></a>mysql8创建远程连接账户</h3><ol>
 <li>创建用户：<br>mysql&gt;create user y385755490@’%’ identified  by ‘123456’;</li>
 <li>再进行赋值：<br>mysql&gt;grant all privileges on <em>.</em> to y385755490@’%’ with grant option;</li>
 <li>最后刷新一下：<br>mysql&gt;flush privileges;</li>
