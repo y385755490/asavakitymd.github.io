@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CentOS 8上安装Docker | Hexo</title>
+  <title>Docker安装mysql | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CentOS 8上安装Docker** 准备工作：CentOS 8的工作实例和具有sudo特权的用户** 一、如何添加必要的Docker存储库我们将使用dnf config-manager实用程序添加Docker存储库。为此，请打开一个终端窗口并发出命令： sudo dnf config-manager –add-repo=https://download.docker.com/linux/cen">
+  <meta name="description" content="Docker安装mysql1.首先下载mysql镜像docker pull mysql 2.然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等(也就是所谓的挂载目录,作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹)mkdir -p /opt/docker_mysql/conf在conf文件夹中创建mysql配置文件my.cnf 3.在上面创建的目录下使用命令启动mysq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS 8上安装Docker">
-<meta property="og:url" content="http://yoursite.com/2019/12/04/CentOS-8上安装Docker/index.html">
+<meta property="og:title" content="Docker安装mysql">
+<meta property="og:url" content="http://yoursite.com/2019/12/06/Docker安装mysql/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="CentOS 8上安装Docker** 准备工作：CentOS 8的工作实例和具有sudo特权的用户** 一、如何添加必要的Docker存储库我们将使用dnf config-manager实用程序添加Docker存储库。为此，请打开一个终端窗口并发出命令： sudo dnf config-manager –add-repo=https://download.docker.com/linux/cen">
+<meta property="og:description" content="Docker安装mysql1.首先下载mysql镜像docker pull mysql 2.然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等(也就是所谓的挂载目录,作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹)mkdir -p /opt/docker_mysql/conf在conf文件夹中创建mysql配置文件my.cnf 3.在上面创建的目录下使用命令启动mysq">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-04T08:45:19.925Z">
+<meta property="og:updated_time" content="2019-12-06T07:31:44.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS 8上安装Docker">
-<meta name="twitter:description" content="CentOS 8上安装Docker** 准备工作：CentOS 8的工作实例和具有sudo特权的用户** 一、如何添加必要的Docker存储库我们将使用dnf config-manager实用程序添加Docker存储库。为此，请打开一个终端窗口并发出命令： sudo dnf config-manager –add-repo=https://download.docker.com/linux/cen">
+<meta name="twitter:title" content="Docker安装mysql">
+<meta name="twitter:description" content="Docker安装mysql1.首先下载mysql镜像docker pull mysql 2.然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等(也就是所谓的挂载目录,作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹)mkdir -p /opt/docker_mysql/conf在conf文件夹中创建mysql配置文件my.cnf 3.在上面创建的目录下使用命令启动mysq">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,41 +154,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CentOS-8上安装Docker" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Docker安装mysql" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CentOS 8上安装Docker
+      Docker安装mysql
     </h1>
   
 
         
-        <a href="/2019/12/04/CentOS-8上安装Docker/" class="archive-article-date">
-  	<time datetime="2019-12-04T08:39:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-04</time>
+        <a href="/2019/12/06/Docker安装mysql/" class="archive-article-date">
+  	<time datetime="2019-12-06T07:30:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="CentOS-8上安装Docker"><a href="#CentOS-8上安装Docker" class="headerlink" title="CentOS 8上安装Docker"></a>CentOS 8上安装Docker</h1><p>** 准备工作：CentOS 8的工作实例和具有sudo特权的用户**</p>
-<h2 id="一、如何添加必要的Docker存储库"><a href="#一、如何添加必要的Docker存储库" class="headerlink" title="一、如何添加必要的Docker存储库"></a>一、如何添加必要的Docker存储库</h2><p>我们将使用dnf config-manager实用程序添加Docker存储库。为此，请打开一个终端窗口并发出命令：</p>
-<p><strong>sudo dnf config-manager –add-repo=<a href="https://download.docker.com/linux/centos/docker-ce.repo" target="_blank" rel="noopener">https://download.docker.com/linux/centos/docker-ce.repo</a></strong></p>
-<h2 id="二、如何找到Docker-CE的可安装版本"><a href="#二、如何找到Docker-CE的可安装版本" class="headerlink" title="二、如何找到Docker CE的可安装版本"></a>二、如何找到Docker CE的可安装版本</h2><p>截至目前，Red Hat已阻止docker-ce的安装，因此，如果您尝试运行命令sudo dnf install docker-ce，将运行失败。相反，您必须安装特定版本的Docker。要找出可用的版本，请发出以下命令：</p>
-<p><strong>dnf list docker-ce –showduplicates | sort -r</strong></p>
-<p>从该列表中，我们可以看到版本docker-ce-3：18.09.1-3.el7可用于安装。 </p>
-<h2 id="三、如何安装Docker-CE"><a href="#三、如何安装Docker-CE" class="headerlink" title="三、如何安装Docker CE"></a>三、如何安装Docker CE</h2><p>要安装该版本，请发出命令：</p>
-<p><strong>sudo dnf install docker-ce-3:18.09.1-3.el7</strong></p>
-<p>为了强制DNS解析在Docker容器中起作用，必须禁用firewalld。为此，发出命令：</p>
-<p><strong>sudo systemctl disable firewalld</strong></p>
-<p>接下来，我们将使用以下命令启动并启用docker守护进程：</p>
-<p><strong>sudo systemctl enable –now docker</strong></p>
-<p>最后，使用以下命令将您的用户添加到docker组：</p>
-<p><strong>sudo usermod -aG docker $USER</strong></p>
-<p>恭喜，您现在可以运行Docker CE并准备在CentOS 8上运行，即刻开始部署那些容器化的应用程序吧。</p>
+        <h1 id="Docker安装mysql"><a href="#Docker安装mysql" class="headerlink" title="Docker安装mysql"></a>Docker安装mysql</h1><h2 id="1-首先下载mysql镜像"><a href="#1-首先下载mysql镜像" class="headerlink" title="1.首先下载mysql镜像"></a>1.首先下载mysql镜像</h2><p>docker pull mysql</p>
+<h2 id="2-然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等-也就是所谓的挂载目录-作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹"><a href="#2-然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等-也就是所谓的挂载目录-作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹" class="headerlink" title="2.然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等(也就是所谓的挂载目录,作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹)"></a>2.然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等(也就是所谓的挂载目录,作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹)</h2><p>mkdir -p /opt/docker_mysql/conf<br>在conf文件夹中创建mysql配置文件my.cnf</p>
+<h2 id="3-在上面创建的目录下使用命令启动mysql容器"><a href="#3-在上面创建的目录下使用命令启动mysql容器" class="headerlink" title="3.在上面创建的目录下使用命令启动mysql容器"></a>3.在上面创建的目录下使用命令启动mysql容器</h2><p>docker run -it -d -p 3306:3306 –name docker_mysql -v $PWD/conf/my.cnf:/etc/mysql/my.cnf -v $PWD/logs:/var/log -v $PWD/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 docker.io/mysql<br>解释一下上面命令的意义:</p>
+<p>-d：表示后台运行，不加-d执行上面的命令你就会看到mysql启动的日志信息了</p>
+<p>-p：表示端口映射，冒号左面的是我们的宿主机的端口，也就是我们虚拟机的端口，而右侧则表示的是mysql容器内的端口</p>
+<p>–name：是我们给mysql容器取的名字</p>
+<p>-v：表示挂载路径，$PWD表示当前目录下，冒号左面的表示我们宿主机的挂载目录，也就是我们虚拟机所在的文件路径，冒号右边则表是的是mysql容器在容器内部的路径，上面的命令我分别挂载了my.cnf(mysql的配置文件)，如需使用配置文件的方式启动mysql，这里则需要加上，mysql的日志，还有mysql存放数据所在的目录</p>
+<h2 id="4-创建结束，以后想进入mysql执行"><a href="#4-创建结束，以后想进入mysql执行" class="headerlink" title="4.创建结束，以后想进入mysql执行"></a>4.创建结束，以后想进入mysql执行</h2><p>dockerr exec -it docker_mysql bash</p>
+<hr>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>SQLyog连接不上mysql<br><strong>解决：</strong><br>关闭防火墙<br>systemctl start firewalld # 开启防火墙<br>systemctl stop firewalld  # 关闭防火墙<br>systemctl status firewalld  #检查防火墙状态</p>
+<h2 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h2><h3 id="mysql8创建远程连接账户"><a href="#mysql8创建远程连接账户" class="headerlink" title="mysql8创建远程连接账户"></a>mysql8创建远程连接账户</h3><ol>
+<li>创建用户：<br>mysql&gt;create user y385755490@’%’ identified  by ‘123456’;</li>
+<li>再进行赋值：<br>mysql&gt;grant all privileges on <em>.</em> to y385755490@’%’ with grant option;</li>
+<li>最后刷新一下：<br>mysql&gt;flush privileges;</li>
+</ol>
 
       
 
@@ -247,7 +247,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/04/CentOS-8上安装Docker/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/06/Docker安装mysql/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,18 +261,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/06/Docker安装mysql/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Docker安装mysql
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/15/centos8配置上网/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">centos8配置上网</div>
+    <a href="/2019/12/04/CentOS-8上安装Docker/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CentOS 8上安装Docker</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -299,7 +290,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CentOS-8上安装Docker"><span class="toc-number">1.</span> <span class="toc-text">CentOS 8上安装Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、如何添加必要的Docker存储库"><span class="toc-number">1.1.</span> <span class="toc-text">一、如何添加必要的Docker存储库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、如何找到Docker-CE的可安装版本"><span class="toc-number">1.2.</span> <span class="toc-text">二、如何找到Docker CE的可安装版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、如何安装Docker-CE"><span class="toc-number">1.3.</span> <span class="toc-text">三、如何安装Docker CE</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker安装mysql"><span class="toc-number">1.</span> <span class="toc-text">Docker安装mysql</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-首先下载mysql镜像"><span class="toc-number">1.1.</span> <span class="toc-text">1.首先下载mysql镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等-也就是所谓的挂载目录-作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹"><span class="toc-number">1.2.</span> <span class="toc-text">2.然后创建一个文件夹用来存放mysql的配置文件，日志，以及数据等(也就是所谓的挂载目录,作用就是将此目录中的文件或文件夹覆盖掉容器内部的文件或文件夹)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-在上面创建的目录下使用命令启动mysql容器"><span class="toc-number">1.3.</span> <span class="toc-text">3.在上面创建的目录下使用命令启动mysql容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-创建结束，以后想进入mysql执行"><span class="toc-number">1.4.</span> <span class="toc-text">4.创建结束，以后想进入mysql执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.5.</span> <span class="toc-text">遇到的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#番外"><span class="toc-number">1.6.</span> <span class="toc-text">番外</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql8创建远程连接账户"><span class="toc-number">1.6.1.</span> <span class="toc-text">mysql8创建远程连接账户</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
